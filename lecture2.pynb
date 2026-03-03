@@ -1,0 +1,164 @@
+#Mutable->> in this we can modify this.
+#str[0]="h"  #strings are immutable-cannot change the value of a string  #Immutable
+#print(str.upper())  #convert to uppercase
+#print(str.lower())  #convert to lowercase
+#print(str)
+#9sep2026---------------------------------------------
+a=10
+print(id(a))          #Memory address
+print(id(10))
+del a
+
+#a=20
+#b=a
+#c=b
+#del 20
+#print(id(b),id(c),id(20))
+#print(type(a))
+#Variance are of two types--> Local and Global -scope of the variable.
+a,b,c,d=10,20.5,"Robert Down",True
+print(a,type(a))   #int
+print(b,type(b))   #float
+print(c,type(c))   #str
+print(d,type(d))      #bool
+
+#python sequence data types--->List-[], tuple-(), Range-range()
+#list:->ordered collection of items enclosed in Square-brackets, mutable,allows duplicate elements.
+my_list=[1,2.5,"hello",True,2,"Robert",3,4,5,6,7,8]
+tiny_list=[123,"Down"]
+print(my_list,type(my_list))
+print(tiny_list,type(tiny_list))
+print(len(my_list),"second list length",len(tiny_list))   #Length of list
+print(my_list[2])       #first element-index starts from 0 and end at (len-1)
+print(my_list[2:])      #Slicing-elements from index 2 to 13
+print(my_list[0:14:3])
+print(my_list[:4])
+print(my_list*2)    #repetition
+print(my_list+tiny_list)  #concatenation
+print(my_list)
+
+#Arrays->set of elements who stores homogenous data. {homo-same}
+#Tuple->ordered collection of items enclosed in Parenthesis,immutable,allows duplicate elements.
+my_tuple=(1,2.5,"hello",True,2,"Robert",2,2.5)
+my_tuple=1,2.5,"helle",True,2,"Robert",2,2.5 
+
+#Range->generates a sequences of numbers,commonly used in for loops.
+m=range(20)  #start,stop,step  
+print(m)
+print(type(m))
+#for i in range(5):   
+#Range->generates a sequences of numbers,commonly used in for loops.
+m = range(20)  # start, stop, step  
+print(m)
+print(type(m))
+for i in range(5):
+    try:
+        del str
+    except NameError:
+        pass    
+
+#ASCII values:-> American Standard Code for Information interchange, 0 2 5 5 is a unique vale hai keypad me range hai
+#(ord A)->ASCII value prints.
+#Binary data types->bytes,bytearray,memory view
+#Bytes:-immutable sequences of bytes,used to store binary data.
+#b=bytes([54,66,77,68,90])   #List of integers
+#print(b,type(b))
+#print(ord('('))   #ASCII value of character
+#questions:->(1)print sum(a) of elements in the list
+a=[2,2,2,22,3,4,5,6,7]  #list
+b=(2,3,4,4,4,45,5,4,4)  #tuple
+c={3,3,4,4,5,5,5,6,6}   #range
+print(a)
+print(b)
+print(c)
+a[2]="Robert"  #mutable
+#b[2]"down"   #immutable
+a=[1,2,3,4,5,6,7,8,9,10]
+b=[1,2,3,4,5,6,7,8,9,10]
+print(a)
+print(b)   
+a[2]="robert" #mutable
+#b[3]="robert"  #immutable
+print(a)
+print(b)
+
+
+#set:-> unordered collection of unique items enclosed in curly braces,mutable,no duplicate elements and set is heterogenous properties.
+#s={1,2.5,"hello",False,5+6j,1.23-4,2.5,"hello"}
+#print(s,type(s))
+#s={[1,2,3,"four"],2.5,"hello",False,5+6j,1.23-4,1,2.5,"hello",(1,2,"three")}
+#s[2]=int(10)
+#print(s,type(s))
+#hash
+Li = [1,2,3,"four",[11,12,13]],[2,5],"hello",False
+Li = [1,2,3,"four",[11,12,13]],[2,5],"hello",False
+
+# don't try to index past the end of the tuple
+# print(Li[4])          # <-- this raised the IndexError
+print(Li[3])            # e.g. the last element, or any index < len(Li)
+
+# access a valid position in `Li` so no IndexError occurs
+print(Li[0][4][2])      # third element of the inner list inside the first tuple element
+# access a valid position in `Li` so no IndexError occurs
+print(Li[0][4][2])  # third element of the inner list inside the first tuple element
+
+
+#Boolean:-Bool-True or False
+print(type(True))
+print(type(False))
+x=20
+y=30
+print(x>y)  #false
+print(x<y)  #true
+print(x==y) #false
+x=None
+print(type(x))  #Nonetype
+print(x is None) #true
+print(x)
+
+#Type conversions:->converting one data type to another data type
+a=int(10)  #explicit conversion(which means internal)                              *Two types of conversions:->(1)Implicit:-> it is internal     
+b=int(20.5) #explicit conversion                                                                               (2)Explicit:-> external(force fully)
+x="30"
+print(type(x)) #str
+c=int(x)
+print(type(c),c) #(int),30
+
+#Type casting:->converting one data type into another data type.
+a=10
+b=20.5
+c=[1,2,3,4,5]
+d=[1,2,3,4,5]
+b=int(b)
+x="30"
+print(c,type(c),d,type(d))
+#z=c+d/a+b   #implicit conversion
+#print(x,type(x))
+c=int(x)
+print(type(c),c)
+
+#Shallow copy:->creates a new object that refer the original objects.
+#Explicit type conversion
+a=int(10)
+b=int(20.5000000)
+c=int(3*2.99903)
+a1=10
+a2=20
+a3=30
+print(type(a),a)
+print(type(b),b)
+print(type(c),c)
+print(type(a1),a1)
+print(type(a2),a2)
+
+
+#conversion to sequences data types.
+#list-list[],tuple-tuple(),set-set()
+a='Hello Avenger Hello Avenger'
+print(a,type(a))
+b=list(a)
+c=tuple(a)
+d=set(a)
+print(b,type(b))
+print(c,type(c))
+print(d,type(d))
